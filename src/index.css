@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF8F3;
+  --color-cream: #F0EBE2;
+  --color-espresso: #302820;
+  --color-olive: #85866A;
+  --color-taupe: #B9AA98;
+  --color-hairline: #E6DFD5;
+  --color-body: #51483F;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-ivory);
+  color: var(--color-espresso);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-ivory);
+  color: var(--color-espresso);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom editorial styling */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Restrained hairline dividers */
+.border-hairline {
+  border-color: #E6DFD5;
+}
+
+/* Subtle image zoom on hover */
+.img-editorial {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .img-editorial {
+  transform: scale(1.03);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D0C3;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B9AA98;
+}
